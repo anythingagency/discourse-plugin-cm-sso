@@ -7,7 +7,7 @@ function initializeCmSso(api) {
 
   // handle login redirect
   if (typeof localStorage !== 'undefined') {
-    var ssoUrl = window.location.protocol + window.location.hostname + window.location.port + Discourse.BaseUri + '/sso/session';
+    var ssoUrl = '/session/sso';
     console.log(ssoUrl);
     if (localStorage.getItem("jwt") && !api.getCurrentUser()) {
       if (!document.referrer.includes(ssoUrl)) {
