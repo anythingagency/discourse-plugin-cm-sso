@@ -1,0 +1,4 @@
+plugins:
+  cm_sso_enabled:
+    default: true
+    client: true
