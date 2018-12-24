@@ -8,7 +8,6 @@ function initializeCmSso(api) {
   // handle login redirect
   if (typeof localStorage !== 'undefined') {
     var ssoUrl = Discourse.BaseUri + '/session/sso';
-    console.log(ssoUrl);
     if (localStorage.getItem("jwt") && !api.getCurrentUser()) {
       if (!document.referrer.includes(ssoUrl)) {
         window.location = ssoUrl;
